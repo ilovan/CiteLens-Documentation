@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.example.org/ns/nonTEI" xmlns:ns1="http://www.tei-c.org/ns/1.0" xmlns:nontei="http://www.example.org/ns/nonTEI">
+  <xs:import namespace="http://www.tei-c.org/ns/1.0" schemaLocation="CiteLens-customization.xsd"/>
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
+  <xs:element name="pubCountry">
+    <xs:annotation>
+      <xs:documentation>Contains the name of the country where a bibliographic item was published.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.naming.attributes"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="citationSource">
+    <xs:annotation>
+      <xs:documentation>description of the journal or book in which the cited paper is included.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="ns1:att.declarable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.global.attributes"/>
+      <xs:attributeGroup ref="ns1:att.sortable.attributes"/>
+      <xs:attributeGroup ref="ns1:att.typed.attributes"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
